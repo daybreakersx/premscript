@@ -263,6 +263,8 @@ cd /etc/openvpn/
 mkdir -p /home/vps/public_html
 cat > /home/vps/public_html/client.ovpn <<-END
 # OpenVPN Configuration
+# (Official Partner VPS-Murah.net)
+# Modified by 0123456
 client
 proto tcp
 persist-key
