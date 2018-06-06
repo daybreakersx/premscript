@@ -12,7 +12,9 @@ For Debian 7 x86 & x64
 
 `apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/debian7-kvm.sh && chmod +x debian7-kvm.sh && ./debian7-kvm.sh && rm -f debian7-kvm.sh && history -c`
 
+For Debian 8 x86 Only
 
+`apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/debian8-kvm.sh && chmod +x debian8-kvm.sh && ./debian8-kvm.sh && rm -f debian8-kvm.sh && history -c`
 
 
 ### Credits:
