@@ -11,3 +11,9 @@ For Centos 6 x86 & x64
 For Debian 7 x86 & x64
 
 `apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/debian7-kvm.sh && chmod +x debian7-kvm.sh && ./debian7-kvm.sh && rm -f debian7-kvm.sh && history -c`
+
+
+### Credits:
+
+Hosting Termurah
+VPS-Murah
