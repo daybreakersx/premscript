@@ -1,0 +1,16 @@
+*filter
+:FORWARD ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -s 192.168.100.0/255.255.255.0 -j ACCEPT
+-A FORWARD -j REJECT --reject-with icmp-port-unreachable
+COMMIT
+
+*nat
+:PREROUTING ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -o venet0 -j SNAT --to-source xxxxxxxxx
+COMMIT
+
