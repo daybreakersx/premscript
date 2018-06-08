@@ -74,5 +74,9 @@ screen -AmdS limit /root/limit.sh
 screen -AmdS ban /root/ban.sh
 clear
 cd
+echo " "
+echo " "
 echo "Premium Script Successfully Update!"
 echo "Modified by 0123456"
+echo " "
+echo " "
