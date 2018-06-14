@@ -1,0 +1,4 @@
+OPTIONS="-p 109 -p 110 -p 442"
+
+# dropbear banner message
+DROPBEAR_BANNER="/etc/issue.net"
