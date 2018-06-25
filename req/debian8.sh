@@ -394,8 +394,8 @@ route-method exe
 route-delay 2
 remote $MYIP 1194
 cipher AES-128-CBC
-END
 
+END
 echo '<ca>' >> /home/vps/public_html/client.ovpn
 cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
 echo '</ca>' >> /home/vps/public_html/client.ovpn
