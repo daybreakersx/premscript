@@ -52,7 +52,7 @@ Premium autoscript installer used to install SSH, OVPN, and PPTP VPN on your VPS
 
 - OpenSSH : 22 & 143
 
-- Stunnel4 : 443
+- Stunnel/4 : 443
 
 - Dropbear : 109, 110 & 442
 
