@@ -232,6 +232,10 @@ http_port 8080
 http_port 8000
 http_port 80
 http_port 3128
+http_port 3129
+http_port 8118
+http_port 666
+http_port 60000
 coredump_dir /var/spool/squid3
 refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
