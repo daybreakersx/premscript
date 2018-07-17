@@ -6,13 +6,13 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - Centos 6 x86 & x64
 
-`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/req/centos6.sh && chmod +x centos6.sh && ./centos6.sh && rm -f centos6.sh && history -c`
+`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/Centos6 && chmod +x Centos6 && ./Centos6 && rm -f Centos6 && history -c`
 
 
 
 - Centos 7 (OVPN not included)
 
-`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/centos7.sh && chmod +x centos7.sh && ./centos7.sh && rm -f centos7.sh && history -c`
+`yum -y update && yum -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/Centos7 && chmod +x Centos7 && ./Centos7 && rm -f Centos7 && history -c`
 
 
 
@@ -24,7 +24,7 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - Debian 8 x86 & x64
 
-`apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/debian8.sh && chmod +x debian8.sh && ./debian8.sh && rm -f debian8.sh && history -c`
+`apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/Debian8 && chmod +x Debian8 && ./Debian8 && rm -f Debian8 && history -c`
 
 
 
