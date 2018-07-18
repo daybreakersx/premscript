@@ -18,7 +18,7 @@ Premium autoscript installer used to install SSH, STUNNEL, OVPN, and PPTP VPN on
 
 - Debian 7 x86 & x64
 
-`apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/deb7.sh && chmod +x deb7.sh && ./deb7.sh && rm -f deb7.sh && history -c`
+`apt-get -y install wget && wget https://raw.githubusercontent.com/daybreakersx/premscript/master/Debian7 && chmod +x Debian7 && ./Debian7 && rm -f Debian7 && history -c`
 
 
 
