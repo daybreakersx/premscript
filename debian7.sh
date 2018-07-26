@@ -427,11 +427,11 @@ service stunnel4 restart
 
 # install webmin
 cd
-wget "https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb"
-dpkg --install webmin_1.881_all.deb;
+wget "http://script.hostingtermurah.net/repo/webmin_1.801_all.deb"
+dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-rm /root/webmin_1.881_all.deb
+rm /root/webmin_1.801_all.deb
 service webmin restart
 service vnstat restart
 apt-get -y --force-yes -f install libxml-parser-perl
