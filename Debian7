@@ -140,7 +140,7 @@ document_root='$document_root'
 fastcgi_script_name='$fastcgi_script_name'
 cat > /etc/nginx/conf.d/vps.conf <<END4
 server {
-  listen       80;
+  listen       85;
   server_name  127.0.0.1 localhost;
   access_log /var/log/nginx/vps-access.log;
   error_log /var/log/nginx/vps-error.log error;
@@ -244,7 +244,6 @@ cat > /home/vps/public_html/client.ovpn <<-END
 # OpenVPN Configuration by HostingTermurah.net
 # (Official Partner VPS-Murah.net)
 # Modified by 0123456
-
 client
 proto tcp
 persist-key
@@ -264,7 +263,6 @@ route-method exe
 route-delay 2
 remote $MYIP 1194
 cipher AES-128-CBC
-
 END
 echo '<ca>' >> /home/vps/public_html/client.ovpn
 cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
@@ -407,6 +405,7 @@ http_access deny all
 http_port 8888
 http_port 8080
 http_port 8000
+http_port 80
 http_port 3128
 coredump_dir /var/spool/squid3
 refresh_pattern ^ftp: 1440 20% 10080
@@ -428,11 +427,11 @@ service stunnel4 restart
 
 # install webmin
 cd
-wget "https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb"
-dpkg --install webmin_1.881_all.deb;
+wget "http://script.hostingtermurah.net/repo/webmin_1.801_all.deb"
+dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-rm /root/webmin_1.881_all.deb
+rm /root/webmin_1.801_all.deb
 service webmin restart
 service vnstat restart
 apt-get -y --force-yes -f install libxml-parser-perl
@@ -534,9 +533,9 @@ echo "   - OpenVPN     : TCP 1194 "  | tee -a log-install.txt
 echo "   - OpenSSH     : 22, 143"  | tee -a log-install.txt
 echo "   - Stunnel4    : 443"  | tee -a log-install.txt
 echo "   - Dropbear    : 109, 110, 442"  | tee -a log-install.txt
-echo "   - Squid Proxy : 3128, 8000, 8080, 8888 (limit to IP Server)"  | tee -a log-install.txt
+echo "   - Squid Proxy : 80, 3128, 8000, 8080, 8888 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn      : 7300"  | tee -a log-install.txt
-echo "   - Nginx       : 80"  | tee -a log-install.txt
+echo "   - Nginx       : 85"  | tee -a log-install.txt
 echo "   - PPTP VPN    : 1732"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Server Tools"  | tee -a log-install.txt
@@ -553,11 +552,11 @@ echo "   Explanation of scripts and VPS setup" | tee -a log-install.txt
 echo "   follow this link: http://bit.ly/penjelasansetup"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Important Information"  | tee -a log-install.txt
-echo "   - Download Config OpenVPN : http://$MYIP/client.ovpn"  | tee -a log-install.txt
-echo "     Mirror (*.tar.gz)       : http://$MYIP/openvpn.tar.gz"  | tee -a log-install.txt
+echo "   - Download Config OpenVPN : http://$MYIP:85/client.ovpn"  | tee -a log-install.txt
+echo "     Mirror (*.tar.gz)       : http://$MYIP:85/openvpn.tar.gz"  | tee -a log-install.txt
 echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
-echo "   - Vnstat                  : http://$MYIP/vnstat/"  | tee -a log-install.txt
-echo "   - MRTG                    : http://$MYIP/mrtg/"  | tee -a log-install.txt
+echo "   - Vnstat                  : http://$MYIP:85/vnstat/"  | tee -a log-install.txt
+echo "   - MRTG                    : http://$MYIP:85/mrtg/"  | tee -a log-install.txt
 echo "   - Installation Log        : cat /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "----------- Script Created By Steven Indarto(fb.com/stevenindarto2) ------------"
