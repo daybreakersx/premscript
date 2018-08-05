@@ -523,7 +523,7 @@ iptables-restore < /etc/iptables.up.rules
 
 # download script
 cd
-wget https://raw.githubusercontent.com/daybreakersx/premscript/master/updates/install-premiumscript.sh -O - -o /dev/null|sh
+wget https://raw.githubusercontent.com/daybreakersx/premscript/master/install-premiumscript.sh -O - -o /dev/null|sh
 
 # finalizing
 apt-get -y autoremove
